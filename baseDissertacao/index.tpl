@@ -25,20 +25,26 @@ li a {
 }
 
 li a:hover {
-    background-color: #111111;
+    background-color: #436EEE;
+}
+.checked{
+   background-color: #436EEE;
 }
 </style>
 </head>
 <body>
 
 <ul>
-  <li><a href="geral">Visão Geral</a></li>
-  <li><a href="view=treeGeral">Tree Geral</a></li>
-  <li><a href="view=treeGeral">Tree Balanceado</a></li>
-  <li><a href="#contact">Tree Enfermeiro 129505</a></li>
-  <li><a href="#about">Tree Madrugada</a></li>
+  <li class="{$checked_treeGeral}"><a href="{$local}?view=treeGeral">Tree Geral</a></li>
+  <li class="{$checked_treeBalanceado}"><a href="{$local}?view=treeBalanceado">Tree Balanceado</a></li>
+  <li class="{$checked_treeEnfermeiro}"><a href="{$local}?view=treeEnfermeiro">Tree Enfermeiro 129505</a></li>
+  <li class="{$checked_treeMadrugada}"><a href="{$local}?view=treeMadrugada">Tree Madrugada</a></li>
 
 </ul>
 {$_conteudo_}
+<br />
+<br />
+O sistema acertoou : {$nroAcertosSistema}<br />
+As regras acertaram : {$nroAcertosRegras}
 </body>
 </html>
